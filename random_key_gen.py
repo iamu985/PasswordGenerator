@@ -1,22 +1,22 @@
 import random
 import string
 
+#variables that we need neatly defined
 ALPHA = list(string.ascii_uppercase)
 alpha = list(string.ascii_lowercase)
 numbers = list(string.digits)
 symbols = list('!#$%&()*+,-./:;<=>?@[\]^_`{|}~.')
 #just a joke | list_words = ['_zoinka', '_kamidesuka', '_frank', '_brano', '_gomes', '_kamisama']
 
-head = ['A', 'a', 'n', 's']
+head = ['A', 'a', 'n', 's'] #list of keys for the dictionary
+
+#dictionary containing all required variables
 dictionary = {
     'A' : ALPHA,
     'a' : alpha,
     'n' : numbers,
     's' : symbols,
     }
-
-
-
 
 class RandomKeyGenerator():
     '''
@@ -31,7 +31,7 @@ A program that gives randomly generated password or key for any given length
 
     def choose_head(self):
         '''
-    Function to choose head
+    Function to randomly choose head
     '''
         random_head = random.choice(self.head)
         return random_head
